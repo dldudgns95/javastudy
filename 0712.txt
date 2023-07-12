@@ -1,0 +1,30 @@
+JDK 11 설치 후 제어판-시스템-고급 시스템 설정보기-환경 변수-시스템 변수에 'JAVA_HOME' 추가 및 'PATH' 변수 값을 편집해 '%JAVA_HOME%\bin'으로 수정
+
+javastudy 깃 설정
+1. GDJ69 파일에서 'GIT Bash here'로 cmd창 열기
+2. mkdir javastudy - javastudy 파일 만들기
+3. cd ./javastudy - javasutdy 파일로 들어가기
+4. git init - 로컬 레파지토리로 만들기
+5. github를 통한 원격 레파지토리 만들기 (원격 레파지토리 주소 확인)
+6. git remote add origin [원격 레파지토리 주소] - 원격 레파지토리로 등록
+7. push를 하기 위한 파일 생성
+	touch README.md -파일 생성
+	echo '# javastudy' >> README.md	- 파일 내용에 'javastudy' 추가
+
+	.gitignore : 깃헙에 안 올리는 파일/디렉터리 목록 작성
+	gitignore.io 사이트에서 개발 환경을 등록하면 자동 생성 (windows, java, eclipse 로 생성)
+	다른이름으로 저장 - 반드시 '.gitignore' 이름으로 저장
+8. push를 통한 원격 레파지토리와의 연결 확인
+
+
+
+JAVA의 구조
+워크스페이스(Workspace)
+ㄴ프로젝트
+  ㄴsrc
+    ㄴ패키지
+      ㄴ클래스
+        ㄴ메인 메소드
+
+
+상수 - 대문자로만 표기
