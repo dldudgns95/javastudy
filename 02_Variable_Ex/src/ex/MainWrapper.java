@@ -28,7 +28,7 @@ public class MainWrapper {
     
     balance *= (1 + pct);
     System.out.println(balance);
-    // long result = (long)((double)balance * pct + balance);
+    // long result = (long) (balance * pct + balance);
     // System.out.println(balance + "의 이자는 " + result);
 
     
