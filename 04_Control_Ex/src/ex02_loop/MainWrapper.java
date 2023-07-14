@@ -24,7 +24,7 @@ public class MainWrapper {
     // ...
     // 1667회 모금액 60원, 현재 모금액 100020원
     int goal = 100000;  // 목표 모금액
-    int money = 100;  // 1회당 모금액
+    int money = 500;  // 1회당 모금액
     int total = 0;  // 모금액 합계
     int nth = 0;  // 회차
     
