@@ -50,7 +50,7 @@ public class MainWrapper {
     
     int n = 0;
     while(n < 10) {
-      System.out.println(n);
+      System.out.println(n+1);
       n++;
     }
     
@@ -131,7 +131,7 @@ public class MainWrapper {
     
     // ex01();
     // ex02();
-    // ex03();
+     ex03();
     // ex04();
     // ex05();
     // ex06();
