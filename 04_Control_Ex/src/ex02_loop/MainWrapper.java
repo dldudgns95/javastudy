@@ -2,6 +2,8 @@ package ex02_loop;
 
 public class MainWrapper {
 
+  
+  
   public static void ex01() {
     // 구구단 출력하기
     // 2 x 1 = 2
@@ -23,13 +25,13 @@ public class MainWrapper {
     // 3회 모금액 60원, 현재 모금액 180원
     // ...
     // 1667회 모금액 60원, 현재 모금액 100020원
-    int goal = 100000;  // 목표 모금액
-    int money = 500;  // 1회당 모금액
+    final int GOAL = 10000;  // 목표 모금액
+    int money = 700;  // 1회당 모금액
     int total = 0;  // 모금액 합계
     int nth = 0;  // 회차
     
-    while(true) {
-      if(total >= goal) break;
+    while(total <= GOAL) {
+      //if(total >= goal) break;
       total += money;
       nth++;
       System.out.println(nth + "회 모금액 " + money + "원, 현재 모금액 " + total + "원");
@@ -62,10 +64,9 @@ public class MainWrapper {
     
     for(int i = 1; i <= 9; i++) {
       for(int j = 2; j <= 9; j++) {
-        System.out.print(j + "X" + i + "=" + i*j + " ");
-        
+        System.out.print(j + "X" + i + "=" + String.format("%-4d", i*j)); // \t : tab키
       }
-      System.out.println("");
+      System.out.println();
     }
     
   }
@@ -101,8 +102,8 @@ public class MainWrapper {
     // a=4   **
     // a=5   *
     
-    for(int i = 5; i >= 1; i--) {
-      for(int j = 1; j <= i; j++) {
+    for(int i = 1; i <= 5; i++) {
+      for(int j = 5; j >= i; j--) {
         System.out.print("*");
       }
       System.out.println();
@@ -117,7 +118,7 @@ public class MainWrapper {
     // a=2      ***        3 3
     // a=3     *****       2 5
     // a=4    *******      1 7
-    // a=5   *********  
+    // a=5   *********     0 9
     
     for(int i = 1; i <= 5; i++) {
       for(int j = 1; j <= 5-i ; j++) {  // 빈칸 출력 
@@ -129,6 +130,7 @@ public class MainWrapper {
       System.out.println();
     }
     
+   
   }
   
   public static void ex08() {
@@ -140,7 +142,7 @@ public class MainWrapper {
     // a=4      ***     3 3
     // a=5       *      4 1
     
-    
+    /*
     for(int i = 1; i <= 5; i++) {
       for(int j = 9; j > 10-i; j--) {  // 빈칸 출력
         System.out.print(" ");
@@ -150,11 +152,34 @@ public class MainWrapper {
       }
       System.out.println();
     }
+    */
+    
+    for(int row = 1; row <= 5; row++) {
+      for(int space = 1; space < row; space++) {
+        System.out.print(" ");
+      }
+      for(int star = row; star <= 10-row; star++ ) {
+        System.out.print("*");
+      }
+      System.out.println();
+    }
     
   }
   
   public static void main(String[] args) {
-    // TODO Auto-generated method stub
+    /*
+    String str1 = String.format("%d",10);
+    String str2 = String.format("%3d", 10);
+    String str3 = String.format("%4d", 10);   // 앞쪽을 공백으로 4번째까지 채우기
+    
+    String str4 = String.format("%-3d", 10);
+    String str5 = String.format("%-4d", 10);  // 뒤쪽을 공백으로 4번째까지 채우기
+    System.out.print(str3 + str2 + str1);
+    System.out.println();
+    System.out.println(str5 + str4 + str1);
+    */
+    
+    
     ex08();
   }
 
