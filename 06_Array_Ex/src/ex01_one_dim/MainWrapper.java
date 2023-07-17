@@ -10,10 +10,10 @@ public class MainWrapper {
     // 6 ~ 8 : 여름      6 ~ 8
     // 9 ~ 11: 가을      9 ~ 11
     // 12 ~ 2: 겨울      0 ~ 2
-    int month = 12;
+    int month = 11;
     String[] seasons = {"겨울", "봄", "여름", "가을"};
     // 코드 1줄로 해결할 것
-    
+    System.out.println(seasons[(month % 12) / 3]);
     
   }
   
@@ -87,12 +87,17 @@ public class MainWrapper {
     int total = score[0];  // 합계(평균을 구할 때 필요한 변수)
     int max = score[0];  // 최댓값
     int min = score[0];  // 최솟값
-    
+    for(int i = 1; i < score.length; i++) {
+    	total += score[i];
+    	if(score[i] > max) max = score[i];
+    	if(score[i] < min) min = score[i];
+    }
+    System.out.println("평균 : " +  (double)total/score.length + ", 최댓값 : " + max + ", 최솟값 : " + min);
   }
   
   public static void main(String[] args) {
     
-    ex05();
+    ex06();
     
   }
 
