@@ -14,6 +14,15 @@ public class MainWrapper {
     //  9  18  27  36  45  54  63  72  81
     int[][] gugudan = new int[8][9];
     
+    for(int i = 0; i < gugudan.length; i++) {
+      for(int j = 0; j < gugudan[i].length; j++) {
+        gugudan[i][j] = (i+2) * (j+1);
+        System.out.print(String.format("%4d", gugudan[i][j]));
+      }
+      System.out.println();
+    }
+    
+    
   }
   
   public static void ex02() {
@@ -36,6 +45,12 @@ public class MainWrapper {
         {4, 4}   // 501호, 502호
     };
     
+    for(int i = 0; i < apt.length; i++) {
+      for(int j = 0; j < apt[i].length; j++) {
+        System.out.println(((i+1)*100) + j + 1 + "호 : " + apt[i][j] + "명");
+      }
+    }
+    
   }
   
   public static void ex03() {
@@ -52,6 +67,13 @@ public class MainWrapper {
         {3, 5},  // 4층
         {4, 4}   // 5층
     };
+    for(int i = 0; i < apt.length; i++) {
+      int result = 0;
+      for(int j = 0; j < apt[i].length; j++) {
+        result += apt[i][j];
+      }
+      System.out.println(i + 1 + "층: " + result + "명");
+    }
     
   }
   
@@ -71,15 +93,23 @@ public class MainWrapper {
         {"수학", "영어", "체육", "과학"}
     };
     
+    for(int i = 0; i< timeTable.length; i++) {
+      System.out.print(weekname[i] + ":");
+      for(int j = 0; j < timeTable[i].length; j++) {
+        System.out.print(String.format("%3s", timeTable[i][j]));
+      }
+      System.out.println();
+    }
+    
   }
 
   public static void ex05() {
     // 2차원 배열 90도 회전하기(배열 a의 90도 회전된 모습을 배열 b에 저장한 뒤, 배열 a가 배열 b를 그대로 가져가기)
-    //   1 1 1 1 1          0 0 0 0 1
-    //   0 0 1 0 0          0 0 0 0 1
-    //   0 0 1 0 0   --->   1 1 1 1 1
-    //   0 0 1 0 0          0 0 0 0 1
-    //   0 0 1 0 0          0 0 0 0 1
+    //   1 1 1 1 1          0 0 0 0 1   00  01  02  03  04    40  30  20  10  00
+    //   0 0 1 0 0          0 0 0 0 1   10  11  12  13  14    41  31  21  11  01
+    //   0 0 1 0 0   --->   1 1 1 1 1   20  21  22  23  24    42  32  22  12  02
+    //   0 0 1 0 0          0 0 0 0 1   30  31  32  33  34    43  33  23  13  03
+    //   0 0 1 0 0          0 0 0 0 1   40  41  42  43  44    44  34  24  14  04
     // 배열 a의 출력결과
     //   00001
     //   00001
@@ -91,15 +121,31 @@ public class MainWrapper {
         {0, 0, 1, 0, 0},
         {0, 0, 1, 0, 0},
         {0, 0, 1, 0, 0},
-        {0, 0, 1, 0, 0}
+        {1, 1, 1, 1, 1}
     };
     int[][] b = new int[5][5];
+    
+    // 배열 b에 회전된 모습 저장
+    for(int i = 0; i < a.length; i++) {
+      for(int j = 0; j < a[i].length; j++) {
+        b[i][j] = a[a.length-1-j][i];
+      }
+    }
+    
+    // 배열 a에 배열 b를 복사
+    for(int i = 0; i < a.length; i++) {
+      for(int j = 0; j < a[i].length; j++) {
+        a[i][j] = b[i][j];
+        System.out.print(String.format("%2d", a[i][j]));
+      }
+      System.out.println();
+    }
     
   }
   
   public static void main(String[] args) {
     
-    
+    ex05();
     
     
   }
