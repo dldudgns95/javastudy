@@ -1,0 +1,9 @@
+기존 프로젝트 내보내기
+프로젝트 지정 후 Export - Java - JAR file 선택 후 Next
+내보낼 위치 + 이름 지정 후 Finish
+(소스코드까지 내보낼 경우 'Export Java source files and resources' 체크) 
+
+외부 프로젝트에서 클래스 사용하기
+프로젝트 지정 후 build path - configure build path 선택
+classpath 선택 후 add external jars로 사용할 프로젝트(jar파일) 선택 후 apply and close
+메인에서 자신이 사용할 클래스명을 적은 후 shift + space를 하면 자동으로 메인에서 클래스가 import 된다.
