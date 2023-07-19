@@ -21,7 +21,5 @@ public class MainWrapper {
     System.out.println(myCalc.subtraction(a, b));
     System.out.println(myCalc.multiplication(a, b));
     System.out.println(myCalc.division(a, b));
-    
   }
-
 }

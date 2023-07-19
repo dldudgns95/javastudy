@@ -28,7 +28,9 @@ public class AccCalculator {
    * @param a
    */
   public void addition(double a) {
+    System.out.print(value);
     value += a;
+    System.out.println(" + " + a + " = " + value);
   }
   /**
    * 파라미터 a를 필드 value에서 빼는 메소드
@@ -36,7 +38,9 @@ public class AccCalculator {
    * @param a
    */
   public void subtraction(double a) {
+    System.out.print(value);
     value -= a;
+    System.out.println(" - " + a + " = " + value);
   }
   /**
    * 파라미터 a를 필드 value에 곱하는 메소드
@@ -44,7 +48,9 @@ public class AccCalculator {
    * @param a
    */
   public void multiplication(double a) {
+    System.out.print(value);
     value *= a;
+    System.out.println(" * " + a + " = " + value);
   }
   /**
    * 필드 value에 파라미터 a를 나누는 메소드
@@ -52,7 +58,9 @@ public class AccCalculator {
    * @param a
    */
   public void division(double a) {
+    System.out.print(value);
     value /= a;
+    System.out.println(" / " + a + " = " + value);
   }
   
   public void showValue() {
