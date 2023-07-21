@@ -145,6 +145,7 @@ public class MainWrapper {
     int score = 80;
     
     String result = (score >= 60) ? "합격" : "불합격" ;
+    System.out.println((score >= 60) ? "합격" : "불합격");
     System.out.println(result);
     
   }
@@ -179,9 +180,9 @@ public class MainWrapper {
     // ex03 메소드 호출
     // ex03();
     // ex04 메소드 호출
-     ex04();
+    // ex04();
     // ex05 메소드 호출
-    // ex05();
+     ex05();
     // ex06 메소드 호출
     // ex06();
   }
