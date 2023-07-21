@@ -4,15 +4,16 @@ public class Driver {
   
   private String name;
   private int career;
-  private boolean bestDriver;
+  private boolean bestDriver; // 기준 career가 10년 이상이면 true
   
   public void setName(String name) {
     this.name = name;
   }
   public void setCareer(int career) {
     this.career = career;
+    setBestDriver(career >= 10);
   }
-  public void setBestDriver(boolean bestDriver) {
+  private void setBestDriver(boolean bestDriver) {
     this.bestDriver = bestDriver;
   }
   
