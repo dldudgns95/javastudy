@@ -8,6 +8,13 @@ public class Family {
   public Family(int familyCount) {
     this.familyCount = familyCount;
     family = new Person[familyCount];   // 배열의 생성이 수행
+    
+    /*
+     *  현재 family 배열의 상태
+     * ┌----------------------┐
+     * │  null │ null │ null  │
+     * └----------------------┘
+     */
   }
   
   public int getFamilyCount() {
