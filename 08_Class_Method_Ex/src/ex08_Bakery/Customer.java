@@ -4,7 +4,6 @@ public class Customer {
   
   private int count;   // 빵을 몇 개 샀는가?
   private int money;      // 돈을 얼마 가지고 있는가?
-  private Bakery bakery;
   
   public Customer(int money) {
     this.money = money;

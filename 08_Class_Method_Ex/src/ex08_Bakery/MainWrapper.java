@@ -8,7 +8,7 @@ public class MainWrapper {
     
     Customer customer = new Customer(10000);      // 10000원을 가진 고객
     
-    customer.buy(bakery, 1, 10000); // bakery에서 빵 3개 구매를 위해서 10000원을 냈다.
+    customer.buy(bakery, 3, 10000); // bakery에서 빵 3개 구매를 위해서 10000원을 냈다.
     
     System.out.println("빵집 money: " + bakery.getMoney() + "원");
     System.out.println("빵집 빵: " + bakery.getCount() + "개");
