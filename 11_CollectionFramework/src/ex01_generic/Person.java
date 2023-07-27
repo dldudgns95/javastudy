@@ -13,6 +13,4 @@ public class Person {
     return "Person [name=" + name + "]";
   }
   
-  
-  
 }

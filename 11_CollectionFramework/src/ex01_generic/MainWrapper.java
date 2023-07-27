@@ -20,10 +20,6 @@ public class MainWrapper {
     box3.setItem(new Person("홍길동"));
     System.out.println(box3.getItem());
     
-    
-    
-    
-    
   }
 
 }
