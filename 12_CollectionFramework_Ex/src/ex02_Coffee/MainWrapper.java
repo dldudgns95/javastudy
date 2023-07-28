@@ -11,8 +11,8 @@ public class MainWrapper {
     cup2.setCoffee(new CafeLatte("카페라떼"));
     
     Person p = new Person();
-    p.addCupToTray(cup1);
     p.addCupToTray(cup2);
+    p.addCupToTray(cup1);
     
     p.trayInfo();
     

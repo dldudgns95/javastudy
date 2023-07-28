@@ -25,4 +25,6 @@ public class SmartPhone extends Camera implements Phone, Computer {
     System.out.println("문자");
   }
 
+
+  
 }
