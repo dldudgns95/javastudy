@@ -53,7 +53,7 @@ public class DayOfTheWeek {
     // month를 이용해 totalDay 누적(리스트 lastDay 활용)
     for(int i = 1; i < month; i++) {
     	totalDay += lastDay.get(i);
-    	if(i == 2 && ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)) {
+    	if(i == 3 && ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)) {
     		totalDay++;
     	}
     }
