@@ -18,7 +18,7 @@ public class Ex01_Math {
       System.out.println("꽝");
     }
   }
-  
+  // 정수 난수로 바꿔서 사용하기
   public static void ex02() {
     
     /*

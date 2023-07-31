@@ -20,7 +20,7 @@ public class Ex02_Random {
     double randomNumber1 = random.nextDouble(); // 0.0 <= n < 1.0
     // 정수
     int randomNumber2 = random.nextInt();   // Integer.MIN_VALUE <= n <= Integer.MAX_VALUE
-    int randomNumber3 = random.nextInt(5);  // 0 ~ 4(5개 난수)
+    int randomNumber3 = random.nextInt(5);  // 0 ~ 4(5개 난수)+
     
     System.out.println(randomNumber1);
     System.out.println(randomNumber2);

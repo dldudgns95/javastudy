@@ -290,7 +290,7 @@ public class Ex01_String {
   
   public static void main(String[] args) {
     
-    ex14();
+    ex03();
     
   }
 

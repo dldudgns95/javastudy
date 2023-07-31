@@ -15,15 +15,15 @@ public class Ex01_System {
     
     
   }
-  
+  // 시간 단위
   public static void ex02() {
     
     /*
      * 시간 단위
      * 
-     * second > ㎳ >   ㎲ >       ㎱ >   ㎰ 
-     *          밀리초 마이크로초 나노초 피코초
-     *          
+     * second > ㎳     > ㎲         > ㎱             > ㎰
+     *          밀리초   마이크로초   나노초           피코초
+     *          1/1,000  1/1,000,000  1/1,000,000,000  1/1,000,000,000,000
      *          currentTimeMillis()   nanoTime()
      */
     

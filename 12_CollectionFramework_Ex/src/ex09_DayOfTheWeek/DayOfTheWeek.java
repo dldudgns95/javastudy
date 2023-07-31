@@ -42,21 +42,27 @@ public class DayOfTheWeek {
     int totalDay = 0;  // AD 1년 1월 1일 이후로 며칠이 지났는지 저장한 변수
     
     // year를 이용해 totalDay 누적
-    for(int i = 1; i < year; i++) {								
+    for(int i = 1; i < year; i++) {
+      totalDay += 365;
     	if((i % 4 == 0 && i % 100 != 0) || i % 400 == 0) {
-    		totalDay += 366;
-    	} else {
-    		totalDay += 365;
-    	}
+    		totalDay++;
+    	} 
     }
     
     // month를 이용해 totalDay 누적(리스트 lastDay 활용)
+    if((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+      lastDay.set(2, 29);
+    }
+    
     for(int i = 1; i < month; i++) {
     	totalDay += lastDay.get(i);
-    	if(i == 3 && ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)) {
-    		totalDay++;
-    	}
     }
+    
+    /*
+    if(month >= 3 && ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)) {
+      totalDay++;
+    }
+    */
     
     // day를 이용해 totalDay 누적
     totalDay += day;
