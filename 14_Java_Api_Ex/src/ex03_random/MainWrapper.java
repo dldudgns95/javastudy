@@ -50,10 +50,9 @@ public class MainWrapper {
 	// 실행예시)
 	// 인증코드: [966419]
 	public static void ex03() {
-		
 		SecureRandom secureRandom = new SecureRandom();
 		
-		int num = secureRandom.nextInt(100000, 999999) + 1;
+		int num = secureRandom.nextInt(900000) + 100000;
 		
 		System.out.println("인증코드: [" + num + "]");
 	}
@@ -165,6 +164,7 @@ public class MainWrapper {
 	//   생성된 6자리 인증번호는 Fa013b입니다.
 	public static void ex07() {
 		
+	  
 
 	}
 
@@ -294,14 +294,14 @@ public class MainWrapper {
 	public static void main(String[] args) {
 		//ex01();
 		//ex02();
-		//ex03();
+		ex03();
 		//ex04();
 		//ex05();
 		//ex06();
 		//ex07();
 		//ex08();
 		//ex09();
-		ex10();
+		//ex10();
 	}
 
 }
