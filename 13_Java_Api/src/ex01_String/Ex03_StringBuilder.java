@@ -23,7 +23,6 @@ public class Ex03_StringBuilder {
     sb.append("ha");
     sb.append("va");
     sb.append("na");
-    
     //StringBuilder 객체에 저장된 문자열을 String으로 변환
     String str = sb.toString();
     System.out.println(str);

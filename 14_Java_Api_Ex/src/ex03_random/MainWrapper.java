@@ -163,7 +163,26 @@ public class MainWrapper {
 	//   몇 자리의 인증번호를 생성할까요? >>> 6
 	//   생성된 6자리 인증번호는 Fa013b입니다.
 	public static void ex07() {
+		Scanner sc = new Scanner(System.in);
+		SecureRandom secureRandom = new SecureRandom();
+		StringBuilder sb = new StringBuilder();
 		
+		System.out.print("몇 자리의 인증번호를 생성할까요? >>> ");
+		int size = sc.nextInt();
+		
+		for(int i = 0; i < size; i++) {
+		  double randomCount = secureRandom.nextDouble();
+		  if(randomCount < 0.33) {
+		    char randomString = (char)(secureRandom.nextInt(26) + 'A');
+		    sb.append(randomString);
+		  } else if(randomCount < 0.66) {
+		    char randomString = (char)(secureRandom.nextInt(26) + 'a');
+		    sb.append(randomString);
+		  } else {
+		    sb.append(secureRandom.nextInt(10));
+		  }
+		}
+		System.out.println("생성된 " + size + "자리 인증번호는 " + sb + "입니다.");
 	  
 
 	}
@@ -294,11 +313,11 @@ public class MainWrapper {
 	public static void main(String[] args) {
 		//ex01();
 		//ex02();
-		ex03();
+		//ex03();
 		//ex04();
 		//ex05();
 		//ex06();
-		//ex07();
+		ex07();
 		//ex08();
 		//ex09();
 		//ex10();
