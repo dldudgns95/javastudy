@@ -18,7 +18,7 @@ public class Lotto {
     Scanner sc = new Scanner(System.in);
     System.out.print("Lotto를 얼마나 구입하시겠습니까?(최대 10만원) >>> ");
     int money = sc.nextInt();
-    if(money <= 0 || money > 100000) {
+    if(money < 1000 || money > 100000) {
       System.out.println( money + "원 Lotto 구매는 불가능합니다.");
       sc.close();
       return 0;
