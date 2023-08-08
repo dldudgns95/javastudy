@@ -34,7 +34,7 @@ public class MainWrapper {
       
       StringBuilder sb = new StringBuilder();
       sb.append(spec);
-      sb.append("?" + "serviceKey=" + URLEncoder.encode(ServiceKey,"UTF-8")); // UnsupportedEncodingException
+      sb.append("?" + "ServiceKey=" + URLEncoder.encode(ServiceKey,"UTF-8")); // UnsupportedEncodingException
       sb.append("&" + "pageNo=" + URLEncoder.encode(pageNo, "UTF-8"));
       sb.append("&" + "numOfRows=" + URLEncoder.encode(numOfRows, "UTF-8"));
       sb.append("&" + "addr=" + URLEncoder.encode(addr,"UTF-8"));

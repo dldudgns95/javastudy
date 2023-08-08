@@ -61,7 +61,7 @@ public class MainWrapper {
       br = new BufferedReader(new FileReader(file1));
       bw = new BufferedWriter(new FileWriter(file2));
       
-      String line = "";
+      String line = null;
       while((line = br.readLine()) != null) {
         bw.write(line + "\n");
       }

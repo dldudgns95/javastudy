@@ -65,16 +65,18 @@ public class NaverCaptcha {
     
   }
   
-  private static String getImage() {
+  private static JSONObject getImage() {
     
     URL url = null;
     HttpURLConnection conn = null;
     BufferedInputStream bin = null;
     BufferedOutputStream bout = null;
+    JSONObject obj = new JSONObject();
     String key = null;
     
     try {
       key = getKey();
+      obj.put("key", key);
       String spec = "https://openapi.naver.com/v1/captcha/ncaptcha.bin?key=" + key;
       
       url = new URL(spec);
@@ -95,6 +97,7 @@ public class NaverCaptcha {
         dir.mkdirs();
       }
       File file = new File(dir, System.currentTimeMillis() + ".jpg");
+      obj.put("file", file.getPath());
       
       bout = new BufferedOutputStream(new FileOutputStream(file));
       
@@ -116,12 +119,12 @@ public class NaverCaptcha {
         e.printStackTrace();
       }
     }
-    return key;
+    return obj;
   }
   
   private static void validInput() {
     
-    String key = getImage();
+    JSONObject getObj = getImage();
     URL url = null;
     HttpURLConnection conn = null;
     BufferedReader reader = null;
@@ -131,7 +134,7 @@ public class NaverCaptcha {
       System.out.print("캡차 값을 입력하시오 >>> ");
       String value = sc.next();
       
-      String spec = "https://openapi.naver.com/v1/captcha/nkey?code=1&key=" + key + "&value=" + value;
+      String spec = "https://openapi.naver.com/v1/captcha/nkey?code=1&key=" + getObj.getString("key") + "&value=" + value;
       
       url = new URL(spec);
       conn = (HttpURLConnection)url.openConnection();
@@ -161,6 +164,10 @@ public class NaverCaptcha {
       } else {
         System.out.println("틀립니다.");
       }
+      File file = new File(getObj.getString("file"));
+      file.delete();
+      System.out.println(file.getPath() + " 파일 삭제 완료");
+      
     } catch(Exception e) {
       System.out.println(e.getMessage());
     } finally {
