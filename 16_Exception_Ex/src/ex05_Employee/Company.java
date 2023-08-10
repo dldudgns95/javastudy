@@ -62,7 +62,7 @@ public class Company {
 	public void findEmployee() {
 		System.out.println("===== 조회 =====");
 		if(employees.isEmpty()) {
-      throw new RuntimeException("등록된 사원이 없습니다. 해고가 불가능합니다.");
+      throw new RuntimeException("등록된 사원이 없습니다. 조회가 불가능합니다.");
     }
     System.out.print("조회할 사원번호 입력 >>> ");
     String empNo = sc.next();
@@ -79,7 +79,7 @@ public class Company {
 	public void printAllEmployee() {
 		System.out.println("===== 전체조회 =====");
 		if(employees.isEmpty()) {
-      throw new RuntimeException("등록된 사원이 없습니다. 해고가 불가능합니다.");
+      throw new RuntimeException("등록된 사원이 없습니다. 조회가 불가능합니다.");
     }
 		System.out.println("전체사원(" + employees.size() + "명)");
 		System.out.println("------------------");
