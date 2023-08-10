@@ -1,0 +1,7 @@
+property 파일 만들기
+src 에서 new - file - 제목.properties 파일 작성 후 생성
+
+		     localhost = 127.0.0.1 로 대체 가능
+url=jdbc:oracle:thin@localhost:1521:xe
+user=계정명
+password=비밀번호
