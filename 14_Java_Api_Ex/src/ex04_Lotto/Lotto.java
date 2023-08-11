@@ -18,13 +18,12 @@ public class Lotto {
     Scanner sc = new Scanner(System.in);
     System.out.print("Lotto를 얼마나 구입하시겠습니까?(최대 10만원) >>> ");
     int money = sc.nextInt();
+    sc.close();
     if(money < 1000 || money > 100000) {
       System.out.println( money + "원 Lotto 구매는 불가능합니다.");
-      sc.close();
       return 0;
     }
     money -= money % 1000;
-    sc.close();
     return money;
   }
   
@@ -40,7 +39,7 @@ public class Lotto {
     while(count < money / 1000) {
       Set<Integer> lotto = new HashSet<Integer>();
       
-      while(lotto.size() < 5) {
+      while(lotto.size() < 6) {
         lotto.add(random.nextInt(45) + 1);
       }
       System.out.print(String.format("%02d", count % 5 + 1) + " : ");

@@ -109,6 +109,7 @@ public class MainWrapper {
         sb.append(line);
       }
       
+      System.out.println(sb.toString());
       // String -> JSONObject 변환
       JSONObject obj = new JSONObject(sb.toString());
       
